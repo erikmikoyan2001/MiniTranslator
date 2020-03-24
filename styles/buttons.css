@@ -1,0 +1,25 @@
+button{
+    cursor: pointer;
+
+    background-color: #ffcf40;
+    border: 0px;
+    height: 32px;
+}
+
+#buttonDeleteUserToken {
+    float: left;
+
+    width: 20%;
+    margin-left: 16px;
+    background-color: #ff2b2b;
+}
+
+#buttonChangeLanguage {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#buttonGetUserToken {
+    width: 20%;
+    margin-left: 16px;
+}

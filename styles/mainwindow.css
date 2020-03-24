@@ -1,0 +1,28 @@
+#mainWindow {
+  /* display: flex; */
+}
+
+#menulanguageSelection {
+  display: flex;
+  justify-content: space-between;  
+}
+
+#menuTextInput {
+  display: flex;
+  justify-content: space-between;  
+}
+
+#menuButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.textinput {
+  width: 100%;
+}
+
+
+
+
+
+
