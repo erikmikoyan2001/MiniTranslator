@@ -1,24 +1,40 @@
-#mainWindow {
-  /* display: flex; */
+#menulanguageSelection *{
+  height: 24px;
 }
 
-#menulanguageSelection {
-  display: flex;
-  justify-content: space-between;  
+#menulanguageSelection button{
+  width: 96px;
+
+  background-color: #ffd129;
+  
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
-#menuTextInput {
-  display: flex;
-  justify-content: space-between;  
+#menulanguageSelection select{
+  width: 176px;
 }
 
-#menuButtons {
-  display: flex;
-  justify-content: space-around;
+#menuTextInput{
+  width: 480px;
+  height: 112px;
 }
 
-.textinput {
-  width: 100%;
+#menuTextInput textarea{
+  width: 240px;
+
+  resize: none;
+}
+
+#buttonGetText{
+  width: 288px;
+  margin-right: 16px;
+}
+
+#buttonDeleteUserToken{
+  width: 176px;
+
+  background-color: #ff0000;
 }
 
 

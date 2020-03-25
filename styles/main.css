@@ -1,37 +1,24 @@
 *{
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-}
-
-body {
-  width: 512px;
-  height: 256px;    
-  background-color: white;
-  padding: 0;
   margin: 0;
 }
 
 header{
-  display: flex;
-  justify-content: space-around;
-
-  background-color: #ffcf40;
-}
-
-a {
-  color: #6600ff;
-}
-
-.textinput{
-  height: 128px;
-  resize: none;
-}
-
-.languagelist select{
   height: 32px;
+  width: 512px;
+
+  background-color: #ffd129;
+}
+
+button{
+  border: 0;
+
+  background-color: #ffd129;
 }
 
 .menu{
   display: flex;
-  margin-top:16px;
+
+  margin: 16px;
 }
+
+

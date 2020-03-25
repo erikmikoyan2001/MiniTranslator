@@ -10,36 +10,29 @@ const textOriginal = document.getElementById('textOriginal');
 const textTranslated = document.getElementById('textTranslated');
 const buttonGetText = document.getElementById('buttonGetText');
 
-// Выбор языка
 
 function updateLanguageSelects () {
+  // Обновление списка языков
   let event = new Event('change');
 	selectLanguageOriginal.dispatchEvent(event);
 	selectLanguageTranslation.dispatchEvent(event);
 }
 
-selectLanguageOriginal.onchange = () => {
-	var allLanguages = selectLanguageTranslation.getElementsByTagName('option');
-	
+function changeLanguage (allLanguages, elementValue) {
+  // Изменение языка
 	for (var i = 0; i < allLanguages.length; i++){
-		if (selectLanguageOriginal.value == allLanguages[i].value){
-			allLanguages[i].disabled = true;
-		} else{
-			allLanguages[i].disabled = false;
-		};
+		allLanguages[i].disabled = (elementValue == allLanguages[i].value);
 	};
+}
+
+selectLanguageOriginal.onchange = () => {
+  changeLanguage(selectLanguageTranslation.getElementsByTagName('option'),
+                 selectLanguageOriginal.value);
 };
 
 selectLanguageTranslation.onchange = () => {
-	var allLanguages = selectLanguageOriginal.getElementsByTagName('option');
-  
-	for (var i = 0; i < allLanguages.length; i++){
-		if (selectLanguageTranslation.value == allLanguages[i].value){
-			allLanguages[i].disabled = true;
-		} else{
-			allLanguages[i].disabled = false;
-		};
-	};
+  changeLanguage(selectLanguageOriginal.getElementsByTagName('option'), 
+                 selectLanguageTranslation.value)
 };
 
 buttonChangeLanguage.onclick = () => {
@@ -50,8 +43,6 @@ buttonChangeLanguage.onclick = () => {
 
 	updateLanguageSelects()
 };
-
-updateLanguageSelects()
 
 // Перевод текста
 buttonGetText.onclick = () => {
@@ -73,7 +64,4 @@ buttonGetText.onclick = () => {
   &text=${encodeURI(textOriginal.value)}`);
 };
 
-
-
-
-
+updateLanguageSelects()

@@ -9,10 +9,10 @@
     <title>Мини-Переводчик</title>
 
     <!-- Стили -->
-    <link rel="stylesheet" href="styles/buttons.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/mainwindow.css">
-    
+    <link rel="stylesheet" href="styles/warningwindow.css">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   </head>
 
@@ -23,7 +23,7 @@
     </header>
 
     <!-- Окно предупреждения -->
-    <div id = 'warningWindow'>
+    <div id = 'warningWindow' class = 'menu'>
       <!-- Текст -->
       <span>У вас не указан токен от Яндекс.Переводчика. 
             Вы можете получить его по 
@@ -36,7 +36,7 @@
       </span>
 
       <!-- Поле для отправки токена -->
-      <div class = 'menu'>
+      <div id = 'menuGetToken'>
         <input type='text' size='42' id='inputUserToken'>
         <button id='buttonGetUserToken'>ok</button>
       </div>
@@ -46,9 +46,8 @@
     <main id = 'mainWindow'>
       <!-- Меню выбора языков -->
       <div id = 'menulanguageSelection' class = 'menu'>
-        <!-- Язык оригинального текста -->
-        <div class = 'languagelist'>	  		  
-          <select  id = 'selectLanguageOriginal'>
+        <!-- Язык оригинального текста -->  		  
+        <select  id = 'selectLanguageOriginal'>
             <option value='ru'>Русский</option>
             <option value='en'>Английский</option>
             <option value='az'>Азербайджанский</option>	
@@ -142,8 +141,7 @@
             <option value='mg'>Малагасийский</option>
             <option value='ja'>Японский</option>
             <option value='ms'>Малайский</option>
-          </select>
-        </div>
+        </select>
         
         <!-- Кнопка обмена языков -->
         <button id = 'buttonChangeLanguage'>
@@ -151,8 +149,7 @@
         </button>
         
         <!-- Язык переведенного текста -->
-        <div class = 'languagelist'>
-          <select id = 'selectLanguageTranslation'>
+        <select id = 'selectLanguageTranslation'>
             <option value='en' selected='selected'>Английский</option>
 						<option value='ru'>Русский</option>   
 						<option value='az'>Азербайджанский</option>	
@@ -246,14 +243,13 @@
 						<option value='mg'>Малагасийский</option>
 						<option value='ja'>Японский</option>
             <option value='ms'>Малайский</option>
-          </select>
-        </div>
+        </select>
       </div>
       
       <!-- Меню ввода текста -->
       <div id = 'menuTextInput' class = 'menu'>
-        <textarea id = 'textOriginal'   class = 'textinput'  placeholder = 'Оригинальный текст'></textarea>
-        <textarea id = 'textTranslated' class = 'textinput'  placeholder = 'Переведенный текст'></textarea>
+        <textarea id = 'textOriginal'    placeholder = 'Оригинальный текст'></textarea>
+        <textarea id = 'textTranslated'  placeholder = 'Переведенный текст'></textarea>
       </div>
 
       <!-- Меню с кнопками -->
