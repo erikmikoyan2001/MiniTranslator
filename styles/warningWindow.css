@@ -1,7 +1,10 @@
 #buttonGetUserToken{
-  width: 128px;
-
-  margin-top: 16px;
+  width: 96px;
 
   float: right;
+}
+
+#menuGetToken{
+  justify-content: space-between;
+  margin-top: 16px;
 }

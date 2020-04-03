@@ -13,6 +13,8 @@
 
 #menulanguageSelection select{
   width: 176px;
+  
+  cursor: pointer;
 }
 
 #menuTextInput{

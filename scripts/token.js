@@ -8,8 +8,8 @@ const inputUserToken = document.getElementById('inputUserToken');
 const buttonGetUserToken = document.getElementById('buttonGetUserToken');
 const buttonDeleteUserToken = document.getElementById('buttonDeleteUserToken');
 
+// Проверка на наличие токена.
 function checkToken () {
-  // Функция проверки токена.
   // Если токена нет, то выводит окно предупреждения.
   localStorage.getItem('token') ? warningWindow.remove(): mainWindow.remove()
 }
@@ -26,7 +26,7 @@ function getToken () {
 		result = JSON.parse(http.responseText);
 		
 		if (result.code == 401){
-			userTokenField.style.background = 'red';
+			inputUserToken.style.background = 'red';
 		} else {
 			localStorage.setItem('token', token)
 			location.reload()
@@ -36,6 +36,7 @@ function getToken () {
 	http.send(`key=${token}&lang=ru&text=house`);
 };
 
+// Удаление токена
 function deleteToken(){
 	let result = confirm('Вы уверены что хотите удалить токен? \
 В таком случае вы не сможете пользоватся переводом.');

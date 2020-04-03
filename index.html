@@ -23,27 +23,26 @@
     </header>
 
     <!-- Окно предупреждения -->
-    <div id = 'warningWindow' class = 'menu'>
+    <div id = 'warningWindow' class = 'window'>
       <!-- Текст -->
       <span>У вас не указан токен от Яндекс.Переводчика. 
-            Вы можете получить его по 
+            Вы можете бесплатно получить его
             <a href = 'https://translate.yandex.ru/developers/keys' target = '_blank'>
-            этой ссылке.
-            </a>
-            <br>
+            тут</a>.
             Не волнуйтесь за свои данные, они храняться локально, на вашем 
             компьютере.
       </span>
-
+      <br>
       <!-- Поле для отправки токена -->
-      <div id = 'menuGetToken'>
-        <input type='text' size='42' id='inputUserToken'>
-        <button id='buttonGetUserToken'>ok</button>
+      <div id = 'menuGetToken'  class = 'menu'>
+        <input type = 'text' size = '42' id = 'inputUserToken' 
+          placeholder = 'trnsl.1.1.xxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'>
+        <button id = 'buttonGetUserToken'>ok</button>
       </div>
     </div>
 
     <!-- Основное окно -->
-    <main id = 'mainWindow'>
+    <main id = 'mainWindow'  class = 'window'>
       <!-- Меню выбора языков -->
       <div id = 'menulanguageSelection' class = 'menu'>
         <!-- Язык оригинального текста -->  		  
@@ -150,7 +149,7 @@
         
         <!-- Язык переведенного текста -->
         <select id = 'selectLanguageTranslation'>
-            <option value='en' selected='selected'>Английский</option>
+            <option value='en'>Английский</option>
 						<option value='ru'>Русский</option>   
 						<option value='az'>Азербайджанский</option>	
 						<option value='ml'>Малаялам</option>

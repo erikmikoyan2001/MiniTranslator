@@ -4,8 +4,12 @@
   "version": "1.0",
   "description": "Мини-переводчик ",
 
+  "permissions": ["clipboardWrite"],
+
   "browser_action": {
     "default_title" : "Мини-переводчик — это удобный и компактный переводчик, который использует для перевода офицальный API от яндекса",
     "default_popup" : "index.html"
-  }
+  },
+
+  "icons": {"512": "icons/512.png"}
 }
